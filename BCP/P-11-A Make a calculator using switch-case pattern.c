@@ -15,7 +15,7 @@ printf("\n\nEnter 1. for Addition.");
 printf("\nEnter 2. for Subtraction.");
 printf("\nEnter 3. for Multiplication.");
 printf("\nEnter 4. for Division.");
-printf("\nEnter 5. for Mode / Reminder.");
+printf("\nEnter 5. for Modulus / Remainder.");
 printf("\n");
 printf("\nEnter your choice:-\t");
 scanf("%d",&ch);
