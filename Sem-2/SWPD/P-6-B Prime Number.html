@@ -1,0 +1,31 @@
+// P-6-B Use Javscript to check whether given number is prime or not
+
+<html>
+<head><title>P-6-B</title></head>
+<body>
+<script>
+function checkPrime(num)
+{
+var i, flag = true;
+for (i = 2; i <= num - 1; i++)
+{
+if (num % i == 0)
+{
+flag = false;
+break;
+}
+}
+if (flag == true)
+{
+document.write(num + " is prime");
+}
+else
+{
+document.write(num + " is not prime");
+}
+}
+checkPrime(4);
+checkPrime(7);
+</script>
+</body>
+</html>
