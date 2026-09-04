@@ -1,0 +1,76 @@
+// P-5-D Use JavaScript to check whether given character is vowel or consonant using switch case
+
+<html lang="en">
+<head><title>P-5-D</title></head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+.wrapper
+{
+padding: 10px;
+margin: 20px;
+background-color: blue;
+}
+input
+{
+height: 20px;
+}
+button
+{
+padding: 10px;
+}
+label
+{
+color: aliceblue;
+font-weight: bold;
+}
+p
+{
+color: aliceblue;
+font-weight: bold;
+}
+</style>
+<script>
+function checkVowelornot()
+{
+var ch;
+ch = document.getElementById("char").value;
+//window.alert(ch);
+if ((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z')) {
+switch (ch)
+{
+case 'a':
+case 'e':
+case 'i':
+case 'o':
+case 'u':
+case 'A':
+case 'E':
+case 'I':
+case 'O':
+case 'U':
+document.getElementById("result").innerHTML = "vowel character";
+break;
+default:
+document.getElementById("result").innerHTML = "Consonant character";
+break;
+}
+}
+else
+{
+document.getElementById("result").innerHTML = "Please Enter Character";
+}
+}
+</script>
+<body>
+<div class="wrapper">
+<label>Enter The character: </label>
+<input id="char" placeholder="Enter character">
+<br><br>
+<button onclick="checkVowelornot()">Check</button>
+<p id="displayresult" style="display: block;">
+Output: <span id="result"></span></p>
+</div>
+</body>
+</html>
