@@ -1,0 +1,68 @@
+// P-6-F b. perform arithmetic operations on two numbers entered into textboxes. Use Radio buttons to select 
+// arithmetic operations (Addition, Subtraction, Multiplication and Division). Display the result in another textbox.
+
+<html>
+<head><title>P-6-F</title></head>
+
+<script>
+function calculate()
+{
+var n1,n2,answer,operation;
+
+n1=Number(document.getElementById("num1").value);
+n2=Number(document.getElementById("num2").value);
+
+operation=document.querySelector('input[name="operation"]:checked').value;
+
+if(operation=="add")
+{
+answer=n1+n2;
+}
+else if(operation=="sub")
+{
+answer=n1-n2;
+}
+else if(operation=="mul")
+{
+answer=n1*n2;
+}
+else if(operation=="div")
+{
+answer=n1/n2;
+}
+
+document.getElementById("answer").value=answer;
+}
+</script>
+
+<body>
+
+Enter first number:
+<input id="num1">
+
+<br><br>
+
+Enter second number:
+<input id="num2">
+
+<br><br>
+
+<input type="radio" name="operation" value="add">Addition
+
+<input type="radio" name="operation" value="sub">Subtraction
+
+<input type="radio" name="operation" value="mul">Multiplication
+
+<input type="radio" name="operation" value="div">Division
+
+<br><br>
+
+<button onclick="calculate()">Calculate</button>
+
+<br><br>
+
+Answer:
+<input id="answer">
+
+</body>
+</html>
