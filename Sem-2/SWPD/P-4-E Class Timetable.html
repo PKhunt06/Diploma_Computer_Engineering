@@ -1,0 +1,193 @@
+// P-4-E Create and format your class time table Page Using Different CSS Elements (Note: use CSS Background, Text, Font, Tables, Links, Images, Margin etc)
+
+
+                                P-4-E-1.html
+
+<html>
+<head><title>P-4-E-1</title></head>
+<link rel="Stylesheet" href="/home/user/Parikshit/SWPD/P-4-E-2.css">
+<H1>My Timetable</H1>
+<TABLE class="myTimetable">
+<THEAD>
+<TR>
+<TH>Sr No.</TH>
+<TH>Monday</TH>
+<TH>Tuesday</TH>
+<TH>Wednesday</TH>
+<TH>Thursday</TH>
+<TH>Friday</TH>
+</TR>
+</THEAD>
+<TBODY>
+<TR>
+<TD>1</TD>
+<TD>
+<div class="subject">Maths</div>
+<div class="room">A12</div>
+</TD>
+<TD>
+<div class="subject">Art</div>
+<div class="room">C1</div>
+</TD>
+<TD>
+<div class="subject">English</div>
+<div class="room">B21</div>
+</TD>
+<TD>
+<div class="subject">Maths</div>
+<div class="room">A12</div>
+</TD>
+<TD>
+<div class="subject">Geography</div>
+<div class="room">B10</div>
+</TD>
+</TR>
+<TR>
+<TD>2</TD>
+<TD>
+  <div class="subject">Science</div>
+<div class="room">Lab1</div>
+</TD>
+<TD>
+  <div class="subject">History</div>
+<div class="room">B13</div>
+</TD>
+<TD>
+<div class="subject">Spanish</div>
+<div class="room">C17</div>
+</TD>
+<TD>
+<div class="subject">P.E.</div>
+<div class="room">A Gym</div>
+</TD>
+<TD>
+<div class="subject">Maths</div>
+<div class="room">A12</div>
+</TD>
+</TR>
+<TR>
+<TD colspan="6" class="break">Break</TD>
+</TR>
+<TR>
+<TD>3</TD>
+<TD>
+<div class="subject">I.T.</div>
+<div class="room">ICT 1</div>
+</TD>
+<TD>
+<div class="subject">English</div>
+<div class="room">B21</div>
+</TD>
+<TD>
+<div class="subject">Musique</div>
+<div class="room">C5</div>
+</TD>
+<TD>
+<div class="subject">English</div>
+<div class="room">B21</div>
+</TD>
+<TD>
+<div class="subject">PSHE</div>
+<div class="room">A24</div>
+</TD>
+</TR>
+<TR>
+<TD colspan="6" class="lunch">Lunch</TD>
+</TR>
+<TR>
+<TD>4</TD>
+<TD>
+<div class="subject">History</div>
+<div class="room">B13</div>
+</TD>
+<TD>
+<div class="subject">Drama</div>
+<div class="room">C17</div>
+</TD>
+<TD>
+  <div class="subject">Maths</div>
+<div class="room">A12</div>
+</TD>
+<TD>
+<div class="subject">Geography</div>
+<div class="room">B10</div>
+</TD>
+<TD>
+<div class="subject">P.E.</div>
+<div class="room">A Gym</div>
+</TD>
+</TR>
+<TR>
+<TD>5</TD>
+<TD>
+<div class="subject">Spanish</div>
+<div class="room">C17</div>
+</TD>
+<TD>
+<div class="subject">Science</div>
+<div class="room">Lab1</div>
+</TD>
+<TD>
+<div class="subject">English</div>
+<div class="room">B21</div>
+</TD>
+<TD>
+<div class="subject">Science</div>
+<div class="room">Lab1</div>
+</TD>
+<TD>
+<div class="subject">R.E.</div>
+<div class="room">B18</div>
+</TD>
+</TR>
+</TBODY>
+</TABLE>
+</html>
+
+
+
+
+
+                                P-4-E-2.css
+
+BODY {
+font-family: Trebuchet MS;
+margin:20px;
+background-color: skyblue;
+}
+H1 {
+text-align: center;
+color: #FFFFFF;
+}
+.myTimetable {
+width:100%;
+border-collapse: collapse;
+table-layout: fixed;
+}
+.myTimetable THEAD{
+color: black;
+}
+.myTimetable TBODY {
+background-color: #AAAAFF;
+}
+.myTimetable TD {
+border: 1px solid black;
+padding: 6px;
+text-align: center;
+}
+.myTimetable TBODY TR TD:first-child {
+background-color: #AAAAFF;
+font-weight: bold;
+}
+.break, .lunch {
+background-color: white !important;
+font-style: italic;
+}
+.subject {
+font-size: 12pt;
+margin-bottom:4px;
+}
+.room {
+font-size: 10pt;
+font-style: italic;
+}
