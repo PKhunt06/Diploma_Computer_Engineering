@@ -1,0 +1,24 @@
+// P-6-E Use JavaScript to perform the following operations: a. calculate the factorial of a given number entered into a textbox. Display the result in another textbox.
+
+<html>
+<head><title>P-6-E</title></head>
+<script>
+function show()
+{
+var i,n,fact=1;
+n=Number(document.getElementById("num").value);
+for(i=1;i<=n;i++)
+{
+fact=fact*i;
+}
+document.getElementById("answer").value=fact;
+}
+</script>
+<body>
+Enter no:
+<input id="num">
+<button onclick="show()">fact</button>
+factorial:
+<input id="answer">
+</body>
+</html>
