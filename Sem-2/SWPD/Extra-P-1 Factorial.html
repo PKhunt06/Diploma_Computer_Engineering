@@ -1,0 +1,27 @@
+// Extra-P-1 Use Javascript to find factorial of a given number.
+
+<html>
+<head><title>EXTRAP-1</title></head>
+<body>
+<script>
+var n=prompt("Enter a No");
+if(n<0)
+{
+document.write("Negative no. don't have factorial")
+}
+else if(n==0)
+{
+document.write("Factorial of 0 is 1")
+}
+else
+{
+var fact=1
+for(var i=1;i<=n;i++)
+{
+fact=fact*i;
+}
+document.write(fact);
+}
+</script>
+</body>
+</html>
