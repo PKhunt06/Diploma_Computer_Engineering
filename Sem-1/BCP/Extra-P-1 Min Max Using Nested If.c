@@ -1,5 +1,4 @@
-// Write a program to find minimum and maximum from
-// a given 3 numbers using nested if statement.
+// Extra-P-1 Write a program to find minimum and maximum from a given 3 numbers using nested if statement.
 
 #include<stdio.h>
 #include<conio.h>
