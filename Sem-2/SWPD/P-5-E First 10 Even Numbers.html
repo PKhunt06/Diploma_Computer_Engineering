@@ -1,0 +1,49 @@
+// P-5-E Use JavaScript to print first 10 even numbers.
+
+<html>
+<head><title>P-5-E</title></head>
+<style>
+.wrapper
+{
+padding:10px;
+margin: 20px;
+background-color: blue;
+color: aliceblue;
+}
+input
+{
+height: 20px;
+}
+label
+{
+color: aliceblue;
+font-weight: bold;
+}
+</style>
+<script>
+function printEvenNum()
+{
+var totaleven = parseInt(document.getElementById("totaleven").value);
+var evenNums = "<br>Even Numbers:<br>";
+var count = 0;
+for(i=1; count <totaleven; i++)
+{
+if(i % 2 == 0 )
+{
+evenNums += i + "<br>";
+count = count + 1;
+}
+}
+document.getElementById("result").innerHTML = evenNums;
+}
+</script>
+<body>
+<div class="wrapper">
+<h3>JavaScript to print First N Even Numbers</h3>
+<label>First</label> <input type="number" min="0" id="totaleven" value="10"/>
+<label> Even Number</label><br>
+<br><input type="button" onclick="printEvenNum()" value="Print Even Numbers" />
+<div id="result"></div>
+</div>
+</body>
+</html>
