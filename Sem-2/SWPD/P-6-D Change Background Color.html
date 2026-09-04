@@ -1,0 +1,25 @@
+// P-6-D b. change background color of webpage as selected by user from a list of colors given in combo box.
+
+<html>
+<head><title>P-6-D</title></head>
+<script>
+function myfunction()
+{
+var x=document.getElementById("name").value;
+alert ("your name is"+x);
+}
+function color()
+{
+var z = document.getElementById("colorpicker").value;
+document.body.style.backgroundColor=z;
+}
+</script>
+<body>
+Name:
+<input type ="text" id ="name">
+<button onclik="myfunction()">click</button>
+<br><br>
+<input type ="color"id ="colorpicker">
+<button onclick="color()">change</button>
+</body>
+</html>
