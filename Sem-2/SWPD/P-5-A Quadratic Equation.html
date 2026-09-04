@@ -1,0 +1,50 @@
+// P-5-A Use JavaScript to perform the following operation: a. find roots of quadratic equation
+
+<html>
+<head><title>P-5-A</title></head>
+<script>
+function findRoots()
+{
+let a,b,c;
+a=document.getElementById("a").value;
+b=document.getElementById("b").value;
+c=document.getElementById("c").value;
+{
+// If a is 0, then equation is not
+// quadratic, but linear
+if (a == 0)
+{
+document.write("Invalid");
+return;
+}
+let d = b * b - 4 * a * c;
+let sqrt_val = Math.sqrt(Math.abs(d));
+if (d > 0)
+{
+document.write("Roots are real and different \n" + "<br/>");
+document.write((-b + sqrt_val) / (2 * a) + "<br/>"+ (-b - sqrt_val) / (2 * a));
+}
+else if (d == 0)
+{
+document.write("Roots are real and same \n" + "<br/>");
+document.write(-b / (2 * a) + "<br/>"+ -b / (2 * a)) ;
+}
+else // d < 0
+{
+document.write("Roots are complex \n");
+document.write(-b / (2 * a) + " + i" + sqrt_val / (2 * a) + "<br/>"+ -b / (2 * a)
+
++ " - i" + sqrt_val) / (2 * a);
+
+}
+}
+}
+</script>
+<body>
+Enter value:
+<input id="a">
+<input id="b">
+<input id="c">
+<button onclick="findRoots()">find</button>
+</body>
+</html>
