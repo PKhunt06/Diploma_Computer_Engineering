@@ -100,6 +100,18 @@ This folder contains C++ practical programs studied as part of the **Basic Objec
 - **P18A** - Unformatted I/O
 - **P18B** - Formatted I/O
 
+
+
+## Extra Practicals
+
+These additional practical programs were completed as supplementary
+practice for the BOOP subject.
+
+- **Extra-P-1** - Compile-Time Polymorphism using Operator Overloading
+- **Extra-P-2** - Hierarchical Inheritance
+- **Extra-P-3** - File Creation, Writing and Reading
+
+
 ## Note
 
 These practical programs are part of my Diploma in Computer Engineering learning archive. They are organized on GitHub for revision, documentation, and maintaining a record of my learning journey.
