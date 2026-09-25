@@ -1,7 +1,5 @@
 // P-12-B WAP which demonstrate Multiple Constructors or Constructor Overloading.
 
-//Program to demonstrate Multiple Constructors or Constructor Overloading.
-
 #include <iostream>
 using namespace std;
 
