@@ -1,5 +1,15 @@
 -- P-1 Implement SQL queries to perform various DDL commands.
 
+
+connect
+Username  ABC
+Password  A12
+
+ABC
+create user name identified by pass;
+
+
+
 Table - 1
 Create table CLIENT_MASTER(CLIENT_NO VARCHAR2(6),NAME VARCHAR2(20),ADDRESS1 VARCHAR2(30),ADDRESS2 VARCHAR2(30),CITY VARCHAR2(15),PINCODE VARCHAR2(8),STATE VARCHAR2(15),BALDUE NUMBER(10,2));
 
