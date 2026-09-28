@@ -1,4 +1,4 @@
--- //P-2 Implement SQL queries to perform various DML commands.
+-- P-2 Implement SQL queries to perform various DML commands.
 -- a. Implement SQL queries to perform various DML commands.
 -- b. Retrieve data using SELECT command and various SQL operators.
 
