@@ -1,0 +1,214 @@
+<!-- P-17 Create responsive webpage of various service provider information using bootstrap panel component, List group component, various alert messages and show message 
+after bootstrap alert has been closed. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link
+        rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    >
+
+    <title>Service Provider Information</title>
+
+    <style>
+        .hidden-message {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container mt-5">
+
+        <h1 class="text-center mb-4">
+            Service Provider Information
+        </h1>
+
+        <!-- Bootstrap Alert -->
+        <div
+            id="alertMessage"
+            class="alert alert-warning alert-dismissible fade show"
+            role="alert"
+        >
+            <strong>Notice!</strong>
+            Please check the details of our service providers below.
+
+            <button
+                type="button"
+                class="close"
+                data-dismiss="alert"
+                aria-label="Close"
+            >
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+
+        <!-- Bootstrap Panel (Card) -->
+        <div class="card mb-4">
+
+            <div class="card-header">
+                Service Providers
+            </div>
+
+            <div class="card-body">
+
+                <ul class="list-group">
+
+                    <!-- Comcast Xfinity -->
+                    <li class="list-group-item">
+
+                        <h5>Comcast Xfinity</h5>
+
+                        <p>
+                            Internet and cable television services.
+                        </p>
+
+                        <button
+                            class="btn btn-info"
+                            data-toggle="collapse"
+                            data-target="#detailsXfinity"
+                        >
+                            More Details
+                        </button>
+
+                        <div id="detailsXfinity" class="collapse">
+
+                            <ul class="list-group mt-2">
+
+                                <li class="list-group-item">
+                                    High-speed Internet plans
+                                </li>
+
+                                <li class="list-group-item">
+                                    Cable TV with premium channels
+                                </li>
+
+                                <li class="list-group-item">
+                                    Contact: 1-800-XFINITY
+                                </li>
+
+                            </ul>
+
+                        </div>
+
+                    </li>
+
+                    <!-- Uber Eats -->
+                    <li class="list-group-item">
+
+                        <h5>Uber Eats</h5>
+
+                        <p>
+                            Food delivery service from local restaurants.
+                        </p>
+
+                        <button
+                            class="btn btn-info"
+                            data-toggle="collapse"
+                            data-target="#detailsUberEats"
+                        >
+                            More Details
+                        </button>
+
+                        <div id="detailsUberEats" class="collapse">
+
+                            <ul class="list-group mt-2">
+
+                                <li class="list-group-item">
+                                    Delivery from a variety of restaurants
+                                </li>
+
+                                <li class="list-group-item">
+                                    Scheduled delivery and pickup options
+                                </li>
+
+                                <li class="list-group-item">
+                                    Contact: support.uber.com
+                                </li>
+
+                            </ul>
+
+                        </div>
+
+                    </li>
+
+                    <!-- Angie's List -->
+                    <li class="list-group-item">
+
+                        <h5>Angie's List</h5>
+
+                        <p>
+                            Reviews and ratings of local home service providers.
+                        </p>
+
+                        <button
+                            class="btn btn-info"
+                            data-toggle="collapse"
+                            data-target="#detailsAngiesList"
+                        >
+                            More Details
+                        </button>
+
+                        <div id="detailsAngiesList" class="collapse">
+
+                            <ul class="list-group mt-2">
+
+                                <li class="list-group-item">
+                                    Find trusted local contractors
+                                </li>
+
+                                <li class="list-group-item">
+                                    Reviews for various home services
+                                </li>
+
+                                <li class="list-group-item">
+                                    Contact: 1-866-326-2503
+                                </li>
+
+                            </ul>
+
+                        </div>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+        <!-- Hidden Message -->
+        <div
+            class="alert alert-success hidden-message"
+            id="afterAlertMessage"
+        >
+            Thank you for checking the service providers!
+        </div>
+
+    </div>
+
+    <!-- Bootstrap JS and Dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        // Show message after alert has been closed
+        $('#alertMessage').on('closed.bs.alert', function () {
+            $('#afterAlertMessage')
+                .removeClass('hidden-message')
+                .fadeIn();
+        });
+    </script>
+
+</body>
+
+</html>
