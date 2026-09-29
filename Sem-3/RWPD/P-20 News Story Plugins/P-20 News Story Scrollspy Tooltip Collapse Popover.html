@@ -1,0 +1,306 @@
+<!-- P-20 Design news story page to demonstrate usage of Scrollspy for multiple section, Tooltip for different photos, Collapsible and popover plugins of bootstrap. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Oii Sun - News Story</title>
+
+    <link
+        rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    >
+
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .navbar {
+            margin-bottom: 20px;
+        }
+
+        section {
+            padding: 40px 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 10px;
+        }
+
+        p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .section-img {
+            width: 150px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+        }
+
+        .collapse {
+            margin-top: 15px;
+        }
+
+        .popover-content {
+            max-width: 300px;
+        }
+    </style>
+</head>
+
+<body data-spy="scroll" data-target="#navbar" data-offset="70">
+
+    <!-- Navigation Bar -->
+    <nav
+        id="navbar"
+        class="navbar navbar-expand-lg navbar-light bg-light fixed-top"
+    >
+
+        <a class="navbar-brand" href="#">
+            Oii Sun
+        </a>
+
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+        >
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+
+            <ul class="navbar-nav ml-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#section1">
+                        Breaking News
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#section2">
+                        Analysis
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#section3">
+                        Community Voices
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container mt-5 pt-4">
+
+        <!-- Section 1 -->
+        <div id="section1" class="mb-4">
+
+            <section class="p-4">
+
+                <h2>
+                    Breaking News: Major Event Unfolds
+                </h2>
+
+                <p>
+                    This section covers the latest updates on the major event
+                    unfolding in the city, providing readers with timely information.
+                </p>
+
+                <img
+                    src="download.jpg"
+                    alt="Breaking News"
+                    class="section-img"
+                    data-toggle="tooltip"
+                    data-placement="top"
+                    title="Image related to breaking news."
+                >
+
+                <br>
+
+                <button
+                    class="btn btn-primary"
+                    data-toggle="collapse"
+                    data-target="#collapsibleSection1"
+                >
+                    Read More
+                </button>
+
+                <div id="collapsibleSection1" class="collapse">
+
+                    <p>
+                        Further details about the breaking news, including
+                        eyewitness accounts, expert opinions, and implications
+                        for the community.
+                    </p>
+
+                </div>
+
+            </section>
+
+        </div>
+
+        <!-- Section 2 -->
+        <div id="section2" class="mb-4">
+
+            <section class="p-4 bg-light">
+
+                <h2>
+                    In-Depth Analysis: Understanding the Situation
+                </h2>
+
+                <p>
+                    This section provides an in-depth analysis of the ongoing
+                    situation, including historical context and expert insights.
+                </p>
+
+                <img
+                    src="oii"
+                    alt="Analysis"
+                    class="section-img"
+                    data-toggle="tooltip"
+                    data-placement="top"
+                    title="Image related to analysis."
+                >
+
+                <br>
+
+                <button
+                    class="btn btn-primary"
+                    data-toggle="collapse"
+                    data-target="#collapsibleSection2"
+                >
+                    Read More
+                </button>
+
+                <div id="collapsibleSection2" class="collapse">
+
+                    <p>
+                        Detailed analysis from experts discussing the causes
+                        and potential consequences of the situation.
+                    </p>
+
+                </div>
+
+            </section>
+
+        </div>
+
+        <!-- Section 3 -->
+        <div id="section3" class="mb-4">
+
+            <section class="p-4">
+
+                <h2>
+                    Community Voices: Perspectives from Residents
+                </h2>
+
+                <p>
+                    This section features opinions and stories from local
+                    residents affected by the news, offering a human perspective.
+                </p>
+
+                <img
+                    src="Community-Voices-Logo_-04.png"
+                    alt="Community Voices"
+                    class="section-img"
+                    data-toggle="tooltip"
+                    data-placement="top"
+                    title="Image related to community voices."
+                >
+
+                <br>
+
+                <button
+                    class="btn btn-primary"
+                    data-toggle="collapse"
+                    data-target="#collapsibleSection3"
+                >
+                    Read More
+                </button>
+
+                <div id="collapsibleSection3" class="collapse">
+
+                    <p>
+                        Community members share their experiences and opinions
+                        on how the event impacts their lives.
+                    </p>
+
+                </div>
+
+            </section>
+
+        </div>
+
+        <!-- Popover -->
+        <div class="text-center">
+
+            <button
+                type="button"
+                class="btn btn-info"
+                data-toggle="popover"
+                title="Additional Resources"
+                data-content="Explore more articles and resources related to this topic on our website."
+            >
+                More Info
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- Bootstrap JS and Dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js">
+    </script>
+
+    <script
+        src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js">
+    </script>
+
+    <script>
+        $(function () {
+
+            // Initialize tooltips
+            $('[data-toggle="tooltip"]').tooltip();
+
+            // Initialize popovers
+            $('[data-toggle="popover"]').popover();
+
+        });
+    </script>
+
+</body>
+
+</html>
