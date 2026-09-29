@@ -1,0 +1,179 @@
+<!-- P-12 UseNavigation tabs/Pills to create responsive web page for summarize of all individual units of any one course. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Computer Engineering Course Summary</title>
+
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .tabs {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0;
+            margin-bottom: 20px;
+        }
+
+        .tab {
+            padding: 10px 20px;
+            margin: 5px;
+            background-color: #ddd;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .tab:hover {
+            background-color: #ccc;
+        }
+
+        .tab.active {
+            background-color: #007bff;
+            color: white;
+        }
+
+        .tab-content {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .content {
+            display: none;
+        }
+
+        .content.active {
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            .tabs {
+                flex-direction: column;
+            }
+
+            .tab {
+                margin: 5px 0;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <ul class="tabs">
+            <li class="tab" data-target="#unit1">
+                Unit 1: Introduction to Programming
+            </li>
+
+            <li class="tab" data-target="#unit2">
+                Unit 2: Data Structures
+            </li>
+
+            <li class="tab" data-target="#unit3">
+                Unit 3: Algorithms
+            </li>
+
+            <li class="tab" data-target="#unit4">
+                Unit 4: Computer Architecture
+            </li>
+
+            <li class="tab" data-target="#unit5">
+                Unit 5: Operating Systems
+            </li>
+        </ul>
+
+        <div class="tab-content">
+
+            <div id="unit1" class="content">
+                <h2>Unit 1: Introduction to Programming</h2>
+                <p>
+                    This unit covers the basics of programming, including syntax,
+                    variables, data types, and control structures.
+                </p>
+            </div>
+
+            <div id="unit2" class="content">
+                <h2>Unit 2: Data Structures</h2>
+                <p>
+                    This unit explores common data structures such as arrays,
+                    linked lists, stacks, and queues.
+                </p>
+            </div>
+
+            <div id="unit3" class="content">
+                <h2>Unit 3: Algorithms</h2>
+                <p>
+                    This unit introduces fundamental algorithms for sorting,
+                    searching, and optimization.
+                </p>
+            </div>
+
+            <div id="unit4" class="content">
+                <h2>Unit 4: Computer Architecture</h2>
+                <p>
+                    This unit covers the internal components of a computer system
+                    and how they interact.
+                </p>
+            </div>
+
+            <div id="unit5" class="content">
+                <h2>Unit 5: Operating Systems</h2>
+                <p>
+                    This unit provides an overview of operating system concepts,
+                    including process management and memory management.
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const tabs = document.querySelectorAll('.tab');
+            const contents = document.querySelectorAll('.content');
+
+            tabs.forEach(tab => {
+                tab.addEventListener('click', function () {
+
+                    // Remove active class from all tabs and contents
+                    tabs.forEach(t => t.classList.remove('active'));
+                    contents.forEach(c => c.classList.remove('active'));
+
+                    // Add active class to the clicked tab and its content
+                    this.classList.add('active');
+
+                    document
+                        .querySelector(this.getAttribute('data-target'))
+                        .classList.add('active');
+                });
+            });
+
+            // Set the default active tab and content
+            tabs[0].classList.add('active');
+            contents[0].classList.add('active');
+        });
+    </script>
+</body>
+</html>
