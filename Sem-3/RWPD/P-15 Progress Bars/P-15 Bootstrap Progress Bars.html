@@ -1,0 +1,171 @@
+<!-- P-15 Following tasks to be performed using bootstrap progress bars component. 
+A) Creating progress bars 
+B) Adding label to progress bars 
+C) Creating multi-color, stripped and animated progress bars 
+D) Changing value of progress bar dynamically using JavaScript -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Combined Progress Bars</title>
+
+    <link
+        rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    >
+
+    <style>
+        .progress-bar-custom {
+            transition: width 0.6s ease;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container mt-5">
+
+        <h2>Progress Bars Showcase</h2>
+
+        <!-- Basic Progress Bar -->
+        <h4>Basic Progress Bar</h4>
+
+        <div class="progress mb-4">
+            <div
+                class="progress-bar"
+                role="progressbar"
+                style="width: 50%;"
+                aria-valuenow="50"
+                aria-valuemin="0"
+                aria-valuemax="100"
+            >
+                50%
+            </div>
+        </div>
+
+        <!-- Progress Bar with Label -->
+        <h4>Progress Bar with Label</h4>
+
+        <div class="progress mb-4">
+            <div
+                class="progress-bar"
+                role="progressbar"
+                style="width: 75%;"
+                aria-valuenow="75"
+                aria-valuemin="0"
+                aria-valuemax="100"
+            >
+                75%
+            </div>
+        </div>
+
+        <!-- Multi-Color Progress Bars -->
+        <h4>Multi-Color Progress Bars</h4>
+
+        <div class="progress mb-4">
+
+            <div
+                class="progress-bar bg-success"
+                role="progressbar"
+                style="width: 25%;"
+                aria-valuenow="25"
+                aria-valuemin="0"
+                aria-valuemax="100"
+            ></div>
+
+            <div
+                class="progress-bar bg-warning"
+                role="progressbar"
+                style="width: 50%;"
+                aria-valuenow="50"
+                aria-valuemin="0"
+                aria-valuemax="100"
+            ></div>
+
+            <div
+                class="progress-bar bg-danger"
+                role="progressbar"
+                style="width: 25%;"
+                aria-valuenow="25"
+                aria-valuemin="0"
+                aria-valuemax="100"
+            ></div>
+
+        </div>
+
+        <!-- Striped and Animated Progress Bar -->
+        <h4>Striped and Animated Progress Bar</h4>
+
+        <div class="progress mb-4">
+            <div
+                class="progress-bar progress-bar-striped progress-bar-animated bg-info"
+                role="progressbar"
+                style="width: 60%;"
+                aria-valuenow="60"
+                aria-valuemin="0"
+                aria-valuemax="100"
+            ></div>
+        </div>
+
+        <!-- Dynamic Progress Bar -->
+        <h4>Dynamic Progress Bar</h4>
+
+        <div class="progress mb-4">
+            <div
+                id="dynamicProgressBar"
+                class="progress-bar progress-bar-custom bg-success"
+                role="progressbar"
+                style="width: 0%;"
+                aria-valuenow="0"
+                aria-valuemin="0"
+                aria-valuemax="100"
+            >
+                0%
+            </div>
+        </div>
+
+        <button
+            class="btn btn-primary"
+            onclick="updateProgressBar(15)"
+        >
+            Update to 15%
+        </button>
+
+        <button
+            class="btn btn-secondary"
+            onclick="updateProgressBar(50)"
+        >
+            Update to 50%
+        </button>
+
+        <button
+            class="btn btn-success"
+            onclick="updateProgressBar(75)"
+        >
+            Update to 75%
+        </button>
+
+        <button
+            class="btn btn-danger"
+            onclick="updateProgressBar(100)"
+        >
+            Update to 100%
+        </button>
+
+    </div>
+
+    <script>
+        function updateProgressBar(value) {
+            var progressBar = document.getElementById("dynamicProgressBar");
+
+            progressBar.style.width = value + "%";
+            progressBar.setAttribute("aria-valuenow", value);
+            progressBar.textContent = value + "%";
+        }
+    </script>
+
+</body>
+</html>
