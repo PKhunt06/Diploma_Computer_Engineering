@@ -1,0 +1,144 @@
+<!-- P-6 Shows at least five to six co-curricular/Extra activities of student that includes multiple images and short description of each activity on responsive web page using responsive
+images with different styles and responsive tables with 3 to 4 different styles such as hover state when mouse over, different color of each row, table with striped row etc. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Co-curricular Activities</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .activity-card img {
+            max-height: 200px;
+            object-fit: cover;
+        }
+        .table-container {
+            margin-top: 20px;
+        }
+        .table-container table {
+            width: 100%;
+            margin: 0 auto;
+        }
+        .table-striped tbody tr:nth-of-type(odd) {
+            background-color: #f9f9f9;
+        }
+        .table-hover tbody tr:hover {
+            background-color: #e9ecef;
+        }
+        .table-bordered th, .table-bordered td {
+            border: 1px solid #dee2e6;
+        }
+        .table-primary {
+            background-color: #cfe2ff;
+        }
+        .table-secondary {
+            background-color: #e2e3e5;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container mt-4">
+    <h1 class="text-center mb-4">Co-curricular Activities</h1>
+    
+    <div class="row">
+        <div class="col-md-4 mb-4">
+            <div class="card activity-card">
+                <img src= sport.jpg class="card-img-top" alt="Sports">
+                <div class="card-body">+
+                    <h5 class="card-title">Sports</h5>
+                    <p class="card-text">Participating in various sports activities helps students stay fit and learn teamwork.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card activity-card">
+                <img src=music.jpg class="card-img-top" alt="Music">
+                <div class="card-body">
+                    <h5 class="card-title">Music</h5>
+                    <p class="card-text">Learning musical instruments or singing improves cognitive skills and provides emotional expression.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card activity-card">
+                <img src=Drama.jpg class="card-img-top" alt="Drama">
+                <div class="card-body">
+                    <h5 class="card-title">Drama</h5>
+                    <p class="card-text">Participating in drama enhances public speaking skills and creativity.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card activity-card">
+                <img src=deba.png class="card-img-top" alt="Debate">
+                <div class="card-body">
+                    <h5 class="card-title">Debate</h5>
+                    <p class="card-text">Debate activities help students develop critical thinking and argumentation skills.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card activity-card">
+                <img src=art.jpg class="card-img-top" alt="Art">
+                <div class="card-body">
+                    <h5 class="card-title">Art</h5>
+                    <p class="card-text">Engaging in art activities fosters creativity and improves fine motor skills.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="table-container">
+        <h2 class="text-center">Activity Schedule</h2>
+        <table class="table table-striped table-bordered table-hover">
+            <thead class="table-primary">
+                <tr>
+                    <th scope="col">Day</th>
+                    <th scope="col">Time</th>
+                    <th scope="col">Activity</th>
+                    <th scope="col">Location</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Monday</td>
+                    <td>10:00 AM - 11:00 AM</td>
+                    <td>Sports</td>
+                    <td>Gymnasium</td>
+                </tr>
+                <tr>
+                    <td>Tuesday</td>
+                    <td>11:00 AM - 12:00 PM</td>
+                    <td>Music</td>
+                    <td>Music Room</td>
+                </tr>
+                <tr>
+                    <td>Wednesday</td>
+                    <td>02:00 PM - 03:00 PM</td>
+                    <td>Drama</td>
+                    <td>Auditorium</td>
+                </tr>
+                <tr class="table-secondary">
+                    <td>Thursday</td>
+                    <td>03:00 PM - 04:00 PM</td>
+                    <td>Debate</td>
+                    <td>Conference Hall</td>
+                </tr>
+                <tr>
+                    <td>Friday</td>
+                    <td>01:00 PM - 02:00 PM</td>
+                    <td>Art</td>
+                    <td>Art Studio</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
