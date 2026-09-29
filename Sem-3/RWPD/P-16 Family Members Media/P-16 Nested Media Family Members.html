@@ -1,0 +1,181 @@
+<!-- P-16 Use media, rounded media, Nested media object to create responsive web page for all family members in hierarchical order. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Family Members</title>
+
+    <link
+        rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    >
+
+    <style>
+        .media-body {
+            border-left: 3px solid #ddd;
+            padding-left: 15px;
+            margin-left: 15px;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+
+        .media-body h5 {
+            font-weight: bold;
+        }
+
+        .grandparent {
+            background-color: #e9ecef;
+            color: #343a40;
+        }
+
+        .parent {
+            background-color: #f1f3f5;
+            color: #495057;
+        }
+
+        .child {
+            background-color: #e9f7ef;
+            color: #2c3e50;
+        }
+
+        .grandchild {
+            background-color: #f0f8ff;
+            color: #34495e;
+        }
+
+        .title {
+            color: #007bff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container mt-5">
+
+        <h2 class="title">Family Members</h2>
+
+        <!-- Grandparent -->
+        <div class="media mb-4 grandparent">
+
+            <div class="media-body">
+                <h5 class="mt-0">Parshottam Bhai</h5>
+
+                <p>
+                    <strong>Name:</strong> Parshottam Bhai
+                </p>
+
+                <p>
+                    <strong>Age:</strong> 62
+                </p>
+
+                <p>
+                    <strong>Bio:</strong>
+                    Parshottam Bhai is a retired Businessman who loves Farming,
+                    Real Estate, Business, and visiting different sites. He has a
+                    good knowledge of "Real Estate" and enjoys peace and silence.
+                </p>
+
+                <p>
+                    <strong>Interesting Facts:</strong>
+                    Ranchhod Bhai has created his own image and is respected by all,
+                    even the "Badmosh".
+                </p>
+
+                <!-- Nested Media Object - Parent -->
+                <div class="media mt-4 parent">
+
+                    <div class="media-body">
+                        <h5 class="mt-0">Naresh Kumar</h5>
+
+                        <p>
+                            <strong>Age:</strong> 43
+                        </p>
+
+                        <p>
+                            <strong>Occupation:</strong> Businessman
+                        </p>
+
+                        <p>
+                            <strong>Hobbies:</strong>
+                            Naresh Kumar enjoys hiking, travelling, photography,
+                            and business.
+                        </p>
+
+                        <!-- Nested Media Object - Child -->
+                        <div class="media mt-4 child">
+
+                            <div class="media-body">
+                                <h5 class="mt-0">Parikshit</h5>
+
+                                <p>
+                                    <strong>Age:</strong> 18
+                                </p>
+
+                                <p>
+                                    <strong>Education:</strong>
+                                    Currently in Diploma 3rd SEM in COMPUTER ENGG.
+                                </p>
+
+                                <p>
+                                    <strong>Interests:</strong>
+                                    Parikshit is passionate about IT, programming,
+                                    web development, software development, and
+                                    learning new technologies.
+                                </p>
+
+                                <!-- Nested Media Object - Grandchild -->
+                                <div class="media mt-4 grandchild">
+
+                                    <div class="media-body">
+                                        <h5 class="mt-0">GRAND CHILD</h5>
+
+                                        <p>
+                                            <strong>Age:</strong> Mystery
+                                        </p>
+
+                                        <p>
+                                            <strong>Favorite Activities:</strong>
+                                            He/She is UNKNOWN.
+                                        </p>
+
+                                        <p>
+                                            <strong>Achievements:</strong>
+                                            Not yet.
+                                        </p>
+
+                                    </div>
+
+                                </div>
+                                <!-- End of Nested Media Object -->
+
+                            </div>
+
+                        </div>
+                        <!-- End of Nested Media Object -->
+
+                    </div>
+
+                </div>
+                <!-- End of Nested Media Object -->
+
+            </div>
+
+        </div>
+        <!-- End of Media Object -->
+
+    </div>
+
+    <!-- Optional: Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
