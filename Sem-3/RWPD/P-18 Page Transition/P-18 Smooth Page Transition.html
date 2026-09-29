@@ -1,0 +1,237 @@
+<!-- P-18 Design a smooth page transition between homepage, about and contact us page using bootstrap transition plugin. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link
+        rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    >
+
+    <title>Page Transition Example</title>
+
+    <style>
+        #content {
+            transition: opacity 0.5s ease;
+        }
+
+        .fade-out {
+            opacity: 0;
+        }
+
+        .fade-in {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container mt-5">
+
+        <h1 class="text-center mb-4">My Website</h1>
+
+        <!-- Navigation -->
+        <nav class="nav nav-pills justify-content-center mb-4">
+
+            <a class="nav-item nav-link active" href="#" id="homeBtn">
+                Home
+            </a>
+
+            <a class="nav-item nav-link" href="#" id="aboutBtn">
+                About
+            </a>
+
+            <a class="nav-item nav-link" href="#" id="contactBtn">
+                Contact Us
+            </a>
+
+        </nav>
+
+        <!-- Content Area -->
+        <div id="content" class="fade-in">
+
+            <h2>Welcome to the Home Page</h2>
+
+            <p>
+                We provide various services to cater to your needs.
+                Our goal is to ensure customer satisfaction by delivering
+                top-quality solutions.
+            </p>
+
+            <ul>
+                <li>
+                    <strong>Service 1:</strong>
+                    High-quality web development.
+                </li>
+
+                <li>
+                    <strong>Service 2:</strong>
+                    Reliable cloud solutions.
+                </li>
+
+                <li>
+                    <strong>Service 3:</strong>
+                    24/7 customer support.
+                </li>
+            </ul>
+
+        </div>
+
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js">
+    </script>
+
+    <script
+        src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js">
+    </script>
+
+    <script>
+        // Page Content
+        const pages = {
+
+            home: `
+                <h2>Welcome to the Home Page</h2>
+
+                <p>
+                    We provide various services to cater to your needs.
+                    Our goal is to ensure customer satisfaction by delivering
+                    top-quality solutions.
+                </p>
+
+                <ul>
+                    <li>
+                        <strong>Service 1:</strong>
+                        High-quality web development.
+                    </li>
+
+                    <li>
+                        <strong>Service 2:</strong>
+                        Reliable cloud solutions.
+                    </li>
+
+                    <li>
+                        <strong>Service 3:</strong>
+                        24/7 customer support.
+                    </li>
+                </ul>
+            `,
+
+            about: `
+                <h2>About Us</h2>
+
+                <p>
+                    We are a dedicated team of professionals committed to
+                    delivering excellence in every project we undertake.
+                    With years of experience in various fields, we are
+                    equipped to handle challenges effectively.
+                </p>
+
+                <h4>Our Mission</h4>
+
+                <p>
+                    To provide innovative solutions that enhance our
+                    clients' businesses.
+                </p>
+
+                <h4>Our Values</h4>
+
+                <ul>
+                    <li>Integrity</li>
+                    <li>Quality</li>
+                    <li>Customer Satisfaction</li>
+                    <li>Innovation</li>
+                </ul>
+            `,
+
+            contact: `
+                <h2>Contact Us</h2>
+
+                <p>
+                    We would love to hear from you!
+                    Please reach out for any inquiries or feedback.
+                </p>
+
+                <h4>Email Us</h4>
+
+                <p>
+                    Email:
+                    <a href="mailto:contact@example.com">
+                        contact@example.com
+                    </a>
+                </p>
+
+                <h4>Call Us</h4>
+
+                <p>
+                    Phone: (123) 456-7890
+                </p>
+
+                <h4>Follow Us</h4>
+
+                <p>
+                    <a href="#">Facebook</a> |
+                    <a href="#">Twitter</a> |
+                    <a href="#">LinkedIn</a>
+                </p>
+            `
+        };
+
+        // Function to change content
+        function changeContent(page) {
+
+            const contentDiv = $('#content');
+
+            contentDiv.addClass('fade-out');
+
+            setTimeout(() => {
+
+                contentDiv
+                    .html(pages[page])
+                    .removeClass('fade-out')
+                    .addClass('fade-in');
+
+            }, 500);
+        }
+
+        // Event Listeners
+        $('#homeBtn').on('click', function () {
+
+            changeContent('home');
+
+            $(this).addClass('active');
+
+            $('#aboutBtn, #contactBtn').removeClass('active');
+        });
+
+        $('#aboutBtn').on('click', function () {
+
+            changeContent('about');
+
+            $(this).addClass('active');
+
+            $('#homeBtn, #contactBtn').removeClass('active');
+        });
+
+        $('#contactBtn').on('click', function () {
+
+            changeContent('contact');
+
+            $(this).addClass('active');
+
+            $('#homeBtn, #aboutBtn').removeClass('active');
+        });
+    </script>
+
+</body>
+
+</html>
