@@ -1,0 +1,183 @@
+<!-- Extra-P-2 Design a header, a responsive grid layout for content, and a footer. The layout will adjust based on the screen size, ensuring it looks 
+good on both mobile and desktop devices. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Responsive Layout Example</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+            padding: 1rem;
+        }
+
+        header {
+            background: #007BFF;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(
+                auto-fill,
+                minmax(300px, 1fr)
+            );
+            gap: 1rem;
+            padding: 1rem;
+        }
+
+        .grid-item {
+            background: #fff;
+            padding: 1.5rem;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        p {
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background: #007BFF;
+            color: #fff;
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+
+        <h1>
+            Responsive Web Layout
+        </h1>
+
+        <nav>
+            <ul>
+                <li>
+                    <a href="#">Home</a>
+                </li>
+
+                <li>
+                    <a href="#">About</a>
+                </li>
+
+                <li>
+                    <a href="#">Services</a>
+                </li>
+
+                <li>
+                    <a href="#">Contact</a>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <!-- Main Content -->
+    <main>
+
+        <div class="grid-container">
+
+            <div class="grid-item">
+                <h2>Content Block 1</h2>
+                <p>
+                    This is a description of content block 1.
+                </p>
+            </div>
+
+            <div class="grid-item">
+                <h2>Content Block 2</h2>
+                <p>
+                    This is a description of content block 2.
+                </p>
+            </div>
+
+            <div class="grid-item">
+                <h2>Content Block 3</h2>
+                <p>
+                    This is a description of content block 3.
+                </p>
+            </div>
+
+            <div class="grid-item">
+                <h2>Content Block 4</h2>
+                <p>
+                    This is a description of content block 4.
+                </p>
+            </div>
+
+            <div class="grid-item">
+                <h2>Content Block 5</h2>
+                <p>
+                    This is a description of content block 5.
+                </p>
+            </div>
+
+            <div class="grid-item">
+                <h2>Content Block 6</h2>
+                <p>
+                    This is a description of content block 6.
+                </p>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>
+            &copy; 2024 Your Company
+        </p>
+    </footer>
+
+</body>
+
+</html>
