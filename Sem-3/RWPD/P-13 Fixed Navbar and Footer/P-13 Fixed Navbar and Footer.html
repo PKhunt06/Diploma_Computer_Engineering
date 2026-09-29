@@ -1,0 +1,290 @@
+<!-- P-13 Use Nav bar component to create responsive fixed to top menu design includes logo, menu, drop down menu, form input elements such as sign-up button, search mechanism etc. 
+And fixed to bottom menu design contains footer information. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LEGO Inspired Web Page with Fixed Navbar and Footer</title>
+
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin-top: 60px; /* Space for fixed navbar */
+            margin-bottom: 60px; /* Space for fixed footer */
+            background-color: #f5f5f5; /* Light background for better contrast */
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #333;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            z-index: 1000;
+        }
+
+        .navbar .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #f5c300; /* LEGO yellow */
+        }
+
+        .navbar .menu {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar .menu a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            margin: 0 5px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .navbar .menu a:hover {
+            background-color: #575757;
+        }
+
+        .navbar .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .navbar .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #333;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .navbar .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .navbar .dropdown-content a:hover {
+            background-color: #575757;
+        }
+
+        .navbar .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .navbar .search-bar {
+            margin-left: 20px;
+        }
+
+        .navbar .search-bar input[type="text"] {
+            padding: 5px;
+            border: none;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        .navbar .search-bar button {
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+            margin-left: 5px;
+        }
+
+        .navbar .search-bar button:hover {
+            background-color: #0056b3;
+        }
+
+        .navbar .sign-up-button {
+            background-color: #28a745;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .navbar .sign-up-button:hover {
+            background-color: #218838;
+        }
+
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .content h1 {
+            color: #f5c300; /* LEGO yellow */
+        }
+
+        .content p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .section {
+            margin: 20px 0;
+        }
+
+        .section h2 {
+            color: #333;
+        }
+
+        .footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 20px;
+        }
+
+        .footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            .navbar .menu {
+                flex-direction: column;
+                display: none;
+            }
+
+            .navbar .menu.active {
+                display: flex;
+            }
+
+            .navbar .menu a {
+                padding: 10px;
+                margin: 0;
+            }
+
+            .navbar .search-bar {
+                flex-direction: column;
+                margin-left: 0;
+            }
+
+            .navbar .search-bar input[type="text"] {
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="navbar">
+        <div class="logo">LEGOLand</div>
+
+        <div class="menu">
+            <a href="#home">Home</a>
+            <a href="#sets">Sets</a>
+            <a href="#builds">Builds</a>
+
+            <div class="dropdown">
+                <a href="#more">More</a>
+
+                <div class="dropdown-content">
+                    <a href="#about">About Us</a>
+                    <a href="#contact">Contact Us</a>
+                    <a href="#blog">Blog</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="search-bar">
+            <input type="text" placeholder="Search LEGO sets...">
+            <button>Search</button>
+        </div>
+
+        <a href="#sign-up" class="sign-up-button">Sign Up</a>
+    </div>
+
+    <div class="content">
+        <h1>Welcome to LEGOLand!</h1>
+
+        <p>
+            Discover the world of LEGO, where creativity and imagination come to life!
+            At LEGOLand, we celebrate the joy of building and exploring with LEGO bricks.
+            Whether you're a seasoned builder or new to the world of LEGO, there's
+            something for everyone here.
+        </p>
+
+        <div class="section">
+            <h2>Popular LEGO Sets</h2>
+
+            <p>
+                Explore our curated selection of popular LEGO sets. From classic themes
+                like LEGO City and LEGO Technic to licensed themes such as LEGO Star Wars
+                and LEGO Harry Potter, we have something to spark your creativity.
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>Creative Builds</h2>
+
+            <p>
+                Get inspired by amazing LEGO creations from builders around the world.
+                Check out our gallery of creative builds and learn how you can start
+                your own building adventure.
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>Join Our Community</h2>
+
+            <p>
+                Become a part of the LEGOLand community! Sign up for our newsletter to
+                stay updated with the latest LEGO news, special offers, and exclusive events.
+            </p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>© 2024 LEGOLand | All Rights Reserved</p>
+
+        <p>
+            <a href="#privacy">Privacy Policy</a> |
+            <a href="#terms">Terms of Service</a>
+        </p>
+    </div>
+
+    <script>
+        // Optional: JavaScript for toggling mobile menu
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuToggle = document.querySelector('.menu-toggle');
+
+            if (menuToggle) {
+                menuToggle.addEventListener('click', function () {
+                    document.querySelector('.menu').classList.toggle('active');
+                });
+            }
+        });
+    </script>
+
+</body>
+</html>
