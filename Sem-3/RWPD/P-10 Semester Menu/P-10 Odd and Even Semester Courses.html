@@ -1,0 +1,370 @@
+<!-- P-10 Design responsive web page that shows odd (sem1, sem3, sem5) and even (sem2, sem4, sem6) semester consider as menu, courses of each semester 
+as submenu using button groups and button toolbar component. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Computer Engineering Diploma Courses</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css"
+        rel="stylesheet">
+
+    <style>
+        .semester-btn-group {
+            margin-bottom: 15px;
+        }
+
+        .course-list {
+            display: none;
+            margin-top: 10px;
+        }
+
+        .course-list.show {
+            display: block;
+        }
+
+        .btn-toolbar {
+            flex-wrap: wrap;
+        }
+
+        .btn-toolbar .btn {
+            margin: 5px;
+        }
+
+        .card-subtitle {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container mt-5">
+
+        <h1 class="mb-4">Computer Engineering Diploma Courses</h1>
+
+        <!-- Button Toolbar for Semesters -->
+        <div class="btn-toolbar" role="toolbar" aria-label="Semester Toolbar">
+
+            <!-- Odd Semesters Button -->
+            <div class="btn-group semester-btn-group"
+                role="group"
+                aria-label="Odd Semesters">
+
+                <button type="button"
+                    class="btn btn-primary"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#oddSemesters"
+                    aria-expanded="false"
+                    aria-controls="oddSemesters">
+
+                    Odd Semesters
+
+                </button>
+            </div>
+
+            <!-- Even Semesters Button -->
+            <div class="btn-group semester-btn-group"
+                role="group"
+                aria-label="Even Semesters">
+
+                <button type="button"
+                    class="btn btn-secondary"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#evenSemesters"
+                    aria-expanded="false"
+                    aria-controls="evenSemesters">
+
+                    Even Semesters
+
+                </button>
+            </div>
+
+        </div>
+
+        <!-- ==================== ODD SEMESTERS ==================== -->
+
+        <div class="collapse course-list" id="oddSemesters">
+
+            <div class="card">
+                <div class="card-body">
+
+                    <h5 class="card-title">Odd Semesters</h5>
+
+                    <!-- Odd Semester Buttons -->
+                    <div class="btn-toolbar"
+                        role="toolbar"
+                        aria-label="Odd Semester Courses">
+
+                        <div class="btn-group"
+                            role="group"
+                            aria-label="Semester 1">
+
+                            <button type="button"
+                                class="btn btn-light"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#sem1Courses"
+                                aria-expanded="false"
+                                aria-controls="sem1Courses">
+
+                                Semester 1
+
+                            </button>
+                        </div>
+
+                        <div class="btn-group"
+                            role="group"
+                            aria-label="Semester 3">
+
+                            <button type="button"
+                                class="btn btn-light"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#sem3Courses"
+                                aria-expanded="false"
+                                aria-controls="sem3Courses">
+
+                                Semester 3
+
+                            </button>
+                        </div>
+
+                        <div class="btn-group"
+                            role="group"
+                            aria-label="Semester 5">
+
+                            <button type="button"
+                                class="btn btn-light"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#sem5Courses"
+                                aria-expanded="false"
+                                aria-controls="sem5Courses">
+
+                                Semester 5
+
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Semester 1 Courses -->
+            <div class="collapse course-list" id="sem1Courses">
+
+                <div class="card">
+                    <div class="card-body">
+
+                        <h6 class="card-subtitle mb-2 text-muted">
+                            Courses for Semester 1
+                        </h6>
+
+                        <ul>
+                            <li>Introduction to Programming</li>
+                            <li>Mathematics for Computing</li>
+                            <li>Basics of Electrical Engineering</li>
+                            <li>Communication Skills</li>
+                        </ul>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Semester 3 Courses -->
+            <div class="collapse course-list" id="sem3Courses">
+
+                <div class="card">
+                    <div class="card-body">
+
+                        <h6 class="card-subtitle mb-2 text-muted">
+                            Courses for Semester 3
+                        </h6>
+
+                        <ul>
+                            <li>Data Structures</li>
+                            <li>Computer Architecture</li>
+                            <li>Digital Logic Design</li>
+                            <li>Operating Systems</li>
+                        </ul>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Semester 5 Courses -->
+            <div class="collapse course-list" id="sem5Courses">
+
+                <div class="card">
+                    <div class="card-body">
+
+                        <h6 class="card-subtitle mb-2 text-muted">
+                            Courses for Semester 5
+                        </h6>
+
+                        <ul>
+                            <li>Database Management Systems</li>
+                            <li>Software Engineering</li>
+                            <li>Computer Networks</li>
+                            <li>Embedded Systems</li>
+                        </ul>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- ==================== EVEN SEMESTERS ==================== -->
+
+        <div class="collapse course-list" id="evenSemesters">
+
+            <div class="card">
+                <div class="card-body">
+
+                    <h5 class="card-title">Even Semesters</h5>
+
+                    <!-- Even Semester Buttons -->
+                    <div class="btn-toolbar"
+                        role="toolbar"
+                        aria-label="Even Semester Courses">
+
+                        <div class="btn-group"
+                            role="group"
+                            aria-label="Semester 2">
+
+                            <button type="button"
+                                class="btn btn-light"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#sem2Courses"
+                                aria-expanded="false"
+                                aria-controls="sem2Courses">
+
+                                Semester 2
+
+                            </button>
+                        </div>
+
+                        <div class="btn-group"
+                            role="group"
+                            aria-label="Semester 4">
+
+                            <button type="button"
+                                class="btn btn-light"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#sem4Courses"
+                                aria-expanded="false"
+                                aria-controls="sem4Courses">
+
+                                Semester 4
+
+                            </button>
+                        </div>
+
+                        <div class="btn-group"
+                            role="group"
+                            aria-label="Semester 6">
+
+                            <button type="button"
+                                class="btn btn-light"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#sem6Courses"
+                                aria-expanded="false"
+                                aria-controls="sem6Courses">
+
+                                Semester 6
+
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Semester 2 Courses -->
+            <div class="collapse course-list" id="sem2Courses">
+
+                <div class="card">
+                    <div class="card-body">
+
+                        <h6 class="card-subtitle mb-2 text-muted">
+                            Courses for Semester 2
+                        </h6>
+
+                        <ul>
+                            <li>Object-Oriented Programming</li>
+                            <li>Mathematics II</li>
+                            <li>Computer Graphics</li>
+                            <li>Digital Logic Design</li>
+                        </ul>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Semester 4 Courses -->
+            <div class="collapse course-list" id="sem4Courses">
+
+                <div class="card">
+                    <div class="card-body">
+
+                        <h6 class="card-subtitle mb-2 text-muted">
+                            Courses for Semester 4
+                        </h6>
+
+                        <ul>
+                            <li>Web Technologies</li>
+                            <li>Software Development Lifecycle</li>
+                            <li>Data Communication</li>
+                            <li>Embedded Systems</li>
+                        </ul>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Semester 6 Courses -->
+            <div class="collapse course-list" id="sem6Courses">
+
+                <div class="card">
+                    <div class="card-body">
+
+                        <h6 class="card-subtitle mb-2 text-muted">
+                            Courses for Semester 6
+                        </h6>
+
+                        <ul>
+                            <li>Mobile Application Development</li>
+                            <li>Cloud Computing</li>
+                            <li>Artificial Intelligence</li>
+                            <li>Capstone Project</li>
+                        </ul>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+</body>
+
+</html>
