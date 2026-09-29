@@ -1,0 +1,237 @@
+<!-- P-19 Design a webpage with different modal dialog for “Save record confirmation”, “Delete record confirmation” using model dialog plugin of bootstrap. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link
+        rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    >
+
+    <title>Modal Dialog Example</title>
+
+    <style>
+        #confirmationMessage {
+            display: none;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container mt-5">
+
+        <h1 class="text-center mb-4">Record Management</h1>
+
+        <!-- Buttons to trigger modals -->
+        <div class="text-center">
+
+            <button
+                class="btn btn-success"
+                data-toggle="modal"
+                data-target="#saveModal"
+            >
+                Save Record
+            </button>
+
+            <button
+                class="btn btn-danger"
+                data-toggle="modal"
+                data-target="#deleteModal"
+            >
+                Delete Record
+            </button>
+
+        </div>
+
+        <!-- Confirmation Message -->
+        <div
+            id="confirmationMessage"
+            class="alert alert-success"
+            role="alert"
+        ></div>
+
+    </div>
+
+    <!-- Save Record Confirmation Modal -->
+    <div
+        class="modal fade"
+        id="saveModal"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="saveModalLabel"
+        aria-hidden="true"
+    >
+
+        <div class="modal-dialog" role="document">
+
+            <div class="modal-content">
+
+                <div class="modal-header">
+
+                    <h5 class="modal-title" id="saveModalLabel">
+                        Save Record Confirmation
+                    </h5>
+
+                    <button
+                        type="button"
+                        class="close"
+                        data-dismiss="modal"
+                        aria-label="Close"
+                    >
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+
+                </div>
+
+                <div class="modal-body">
+                    Are you sure you want to save this record?
+                </div>
+
+                <div class="modal-footer">
+
+                    <button
+                        type="button"
+                        class="btn btn-secondary"
+                        data-dismiss="modal"
+                    >
+                        Cancel
+                    </button>
+
+                    <button
+                        type="button"
+                        class="btn btn-primary"
+                        id="confirmSave"
+                    >
+                        Yes, Save
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Delete Record Confirmation Modal -->
+    <div
+        class="modal fade"
+        id="deleteModal"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="deleteModalLabel"
+        aria-hidden="true"
+    >
+
+        <div class="modal-dialog" role="document">
+
+            <div class="modal-content">
+
+                <div class="modal-header">
+
+                    <h5 class="modal-title" id="deleteModalLabel">
+                        Delete Record Confirmation
+                    </h5>
+
+                    <button
+                        type="button"
+                        class="close"
+                        data-dismiss="modal"
+                        aria-label="Close"
+                    >
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+
+                </div>
+
+                <div class="modal-body">
+                    Are you sure you want to delete this record?
+                    This action cannot be undone.
+                </div>
+
+                <div class="modal-footer">
+
+                    <button
+                        type="button"
+                        class="btn btn-secondary"
+                        data-dismiss="modal"
+                    >
+                        Cancel
+                    </button>
+
+                    <button
+                        type="button"
+                        class="btn btn-danger"
+                        id="confirmDelete"
+                    >
+                        Yes, Delete
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js">
+    </script>
+
+    <script
+        src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js">
+    </script>
+
+    <script>
+        $(document).ready(function () {
+
+            // Handle Save Confirmation
+            $('#confirmSave').on('click', function () {
+
+                $('#saveModal').modal('hide');
+
+                $('#confirmationMessage')
+                    .text('Record has been saved successfully!')
+                    .removeClass('alert-danger')
+                    .addClass('alert-success')
+                    .fadeIn();
+
+                setTimeout(() => {
+                    $('#confirmationMessage').fadeOut();
+                }, 3000);
+
+            });
+
+            // Handle Delete Confirmation
+            $('#confirmDelete').on('click', function () {
+
+                $('#deleteModal').modal('hide');
+
+                $('#confirmationMessage')
+                    .text('Record has been deleted successfully!')
+                    .removeClass('alert-success')
+                    .addClass('alert-danger')
+                    .fadeIn();
+
+                setTimeout(() => {
+                    $('#confirmationMessage').fadeOut();
+                }, 3000);
+
+            });
+
+        });
+    </script>
+
+</body>
+
+</html>
