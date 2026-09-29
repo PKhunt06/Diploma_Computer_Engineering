@@ -1,0 +1,115 @@
+<!-- P-5 Create responsive web page of your class time table by using bootstrap grid system. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Timetable</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .timetable-table {
+            border-collapse: collapse;
+            width: 100%;
+            background-color: #F0F8FF; /* Alice blue background for the whole table */
+        }
+        .timetable-table th, .timetable-table td {
+            border: 1px solid #87CEEB; /* Sky blue border */
+            padding: 8px;
+            text-align: center;
+        }
+        .timetable-table th {
+            background-color: #87CEEB; /* Sky blue background */
+            color: #fff;
+        }
+        .timetable-table tr:nth-child(even) {
+            background-color: #E0FFFF; /* Light cyan for even rows */
+        }
+        .timetable-table tr:hover {
+            background-color: #B0E0E6; /* Light sky blue for hover effect */
+        }
+        .table-container {
+            overflow-x: auto;
+        }
+        .table-container table {
+            min-width: 600px; /* Ensure table has a minimum width */
+        }
+    </style>
+</head>
+<body>
+
+<div class="container mt-4">
+    <h1 class="text-center mb-4">Weekly Timetable</h1>
+    
+    <div class="table-container">
+        <table class="timetable-table table table-bordered">
+            <thead>
+                <tr>
+                    <th scope="col">Time</th>
+                    <th scope="col">Monday</th>
+                    <th scope="col">Tuesday</th>
+                    <th scope="col">Wednesday</th>
+                    <th scope="col">Thursday</th>
+                    <th scope="col">Friday</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>08:00 - 09:00</td>
+                    <td>BOPS</td>
+                    <td>DSA</td>
+                    <td>RDBMS</td>
+                    <td>PYTHON</td>
+                    <td>BOPS</td>
+                </tr>
+                <tr>
+                    <td>09:00 - 10:00</td>
+                    <td>PYTHON</td>
+                    <td>BOPS</td>
+                    <td>DSA</td>
+                    <td>RDBMS</td>
+                    <td>PYTHON</td>
+                </tr>
+                <tr>
+                    <td>10:00 - 11:00</td>
+                    <td>RDBMS</td>
+                    <td>PYTHON</td>
+                    <td>BOPS</td>
+                    <td>DSA</td>
+                    <td>RDBMS</td>
+                </tr>
+                <tr>
+                    <td>11:00 - 12:00</td>
+                    <td>DSA</td>
+                    <td>RDBMS</td>
+                    <td>PYTHON</td>
+                    <td>BOPS</td>
+                    <td>DSA</td>
+                </tr>
+                <tr>
+                    <td>12:00 - 01:00</td>
+                    <td>Lunch</td>
+                    <td>Lunch</td>
+                    <td>Lunch</td>
+                    <td>Lunch</td>
+                    <td>Lunch</td>
+                </tr>
+                <tr>
+                    <td>01:00 - 02:00</td>
+                    <td>DSA</td>
+                    <td>BOPS</td>
+                    <td>PYTHON</td>
+                    <td>RDBMS</td>
+                    <td>PYTHON</td>
+                </tr>
+                <!-- Add more rows as needed -->
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
