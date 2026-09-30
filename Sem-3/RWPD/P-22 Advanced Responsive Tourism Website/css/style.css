@@ -1,0 +1,221 @@
+/* ==============================
+   Explore Gujarat - Common CSS
+   ============================== */
+
+/* General */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Navbar */
+.navbar-brand {
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+.navbar-nav .nav-link {
+    font-weight: 500;
+    margin-left: 10px;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #007bff !important;
+}
+
+/* Hero Section */
+.hero-section {
+    min-height: 500px;
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+    ),
+    url("../images/hero.jpg");
+
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+}
+
+.hero-content p {
+    font-size: 1.3rem;
+}
+
+/* Section Titles */
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-title h2 {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.section-title p {
+    color: #666;
+}
+
+/* Destination Cards */
+.destination-card {
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.destination-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.destination-card img {
+    height: 220px;
+    object-fit: cover;
+}
+
+/* Package Cards */
+.package-card {
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.package-card:hover {
+    transform: translateY(-5px);
+}
+
+.package-price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #007bff;
+}
+
+/* General Cards */
+.custom-card {
+    border: none;
+    border-radius: 10px;
+    padding: 25px;
+    background-color: white;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Page Header */
+.page-header {
+    padding: 80px 20px;
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.page-header h1 {
+    font-size: 2.8rem;
+    font-weight: bold;
+}
+
+/* Gallery */
+.gallery-img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.gallery-img:hover {
+    transform: scale(1.03);
+}
+
+/* Footer */
+footer {
+    background-color: #212529;
+    color: white;
+    padding: 40px 0 20px;
+    margin-top: 50px;
+}
+
+footer h5 {
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+footer a {
+    color: #ddd;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-bottom {
+    border-top: 1px solid #555;
+    margin-top: 25px;
+    padding-top: 15px;
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+
+    .hero-section {
+        min-height: 400px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .page-header {
+        padding: 60px 15px;
+    }
+
+    .page-header h1 {
+        font-size: 2.2rem;
+    }
+
+    .navbar-nav .nav-link {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 576px) {
+
+    body {
+        font-size: 14px;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-section {
+        min-height: 350px;
+    }
+
+    .destination-card img {
+        height: 200px;
+    }
+
+    .gallery-img {
+        height: 180px;
+    }
+}
