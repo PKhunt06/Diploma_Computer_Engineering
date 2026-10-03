@@ -1,6 +1,6 @@
 // P-6-D Implement Insertion sort algorithm.
-// P-6-D Write an algorithm for Insertion sort method.
-// P-6-D Write a Source Code to implement insertion sort algorithm.
+// P-6-D-1 Write an algorithm for Insertion sort method.
+// P-6-D-2 Write a Source Code to implement insertion sort algorithm.
 
 #include <stdio.h>
 
