@@ -1,6 +1,6 @@
 // P-6 Implement Bubble sort algorithm.
-// P-6-1 Write an algorithm for Bubble sort method.
-// P-6-2 Write a Source Code to implement Bubble sort algorithm.
+// P-6-A-1 Write an algorithm for Bubble sort method.
+// P-6-A-2 Write a Source Code to implement Bubble sort algorithm.
 
 #include <stdio.h>
 
