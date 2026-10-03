@@ -6,17 +6,17 @@
 int main()
 {
     int n;
-    int *ptr;
+    int *p;
 
     printf("Enter a number: ");
     scanf("%d", &n);
 
-    ptr = &n;
+    p = &n;
 
     printf("\nValue of n = %d", n);
     printf("\nAddress of n = %p", (void *)&n);
-    printf("\nValue stored in pointer = %p", (void *)ptr);
-    printf("\nValue using pointer = %d", *ptr);
+    printf("\nAddress stored in pointer = %p", (void *)p);
+    printf("\nValue using pointer = %d", *p);
 
     return 0;
 }
