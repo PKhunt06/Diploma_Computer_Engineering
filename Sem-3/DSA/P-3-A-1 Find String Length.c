@@ -1,5 +1,5 @@
 // P-3 Implement various string algorithms.
-// P-3-A-1 Implement a program to find the length of given string
+// P-3-A-1 Write a source code to find the length of a given string.
 
 #include <stdio.h>
 
